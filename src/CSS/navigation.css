@@ -1,0 +1,9 @@
+.header {
+  display: flex;
+  justify-content: flex-end;
+  background-color: rgb(73, 177, 116);
+}
+.header a {
+  color: white;
+  margin: 5px;
+}
