@@ -1,60 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import header from '../CSS/navigation.css';
+import Header from './Header';
+import Footer from './Footer';
 
-function NavTabs({ currentPage, handlePageChange }) {
+import Portfolio from './Portfolio';
+import AboutMe from './AboutMe';
+import Resume from './Resume';
+import Contact from './Contact';
+
+export default function Navigation() {
+  const [currentPage, setCurrentPage] = useState('Home');
+
+  // TODO: Add a comment describing the functionality of this method
+  const renderPage = () => {
+    if (currentPage === 'AboutMe') {
+      return <AboutMe />;
+    }
+    if (currentPage === 'Portfolio') {
+      return <Portfolio />;
+    }
+    if (currentPage === 'Resume') {
+      return <Resume />;
+    }
+    return <Contact />;
+  };
+
+  const handlePageChange = (page) => setCurrentPage(page);
+
   return (
-    <ul className="nav nav-tabs header">
-      <li className="nav-item">
-        <a
-          href="#AboutMe"
-          onClick={() => handlePageChange('AboutMe')}
-          //*  TODO: BONUS: Add a comment explaining what kind of operator this is and what it is checking for
-
-          className={
-            currentPage === 'AboutMe' ? 'nav-link active ' : 'nav-link '
-          }
-        >
-          About Me
-        </a>
-      </li>
-      <li className="nav-item">
-        <a
-          href="#Portfolio"
-          onClick={() => handlePageChange('Portfolio')}
-          //  TODO: Add a comment explaining what this logic is doing
-
-          className={
-            currentPage === 'Portfolio' ? 'nav-link active' : 'nav-link'
-          }
-        >
-          Portfolio
-        </a>
-      </li>
-      <li className="nav-item">
-        <a
-          href="#Contact"
-          onClick={() => handlePageChange('Contact')}
-          //  TODO: Add a comment explaining what this logic is doing
-
-          className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}
-        >
-          Contact
-        </a>
-      </li>
-      <li className="nav-item">
-        <a
-          href="#Resume"
-          //  TODO: Add a comment explaining what this logic is doing
-
-          onClick={() => handlePageChange('Resume')}
-          className={currentPage === 'Resume' ? 'nav-link active' : 'nav-link'}
-        >
-          Resume
-        </a>
-      </li>
-    </ul>
+    <div>
+      {/* // TODO: Add a comment describing what we are passing as props */}
+      <Header currentPage={currentPage} handlePageChange={handlePageChange} />
+      {/* // TODO: Add a comment explaining what is happening on the following line */}
+      {renderPage()}
+      <Footer />
+    </div>
   );
 }
-
-export default NavTabs;
