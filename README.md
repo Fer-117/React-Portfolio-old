@@ -17,42 +17,15 @@
 
 ## Description
 
-An API for a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list
+My portfolio built with vite React. Here you'll find my contact information as well as a compilation of projects I have worked on.
 
 ## Installation
 
-Since this is only a back-end project at the moment what you need to do is download or clone the repository first. Then open your IDE and in the terminal run npm install to download all the necessary dependencies. You can also run 'npm run seed' which will generate random users and random thoughts thanks to the logic in the seed.js file.
+There are no installation instructions for this project, visit the website and see what I have made!
 
 ## Usage
 
-Once you have downloaded the project, installed the dependencies and run the seed generator you can run `npm start` to start the server. You can then use insomnia to make requests to the database with the help of certain routes. Here are some of the routes you will need to consult the data in the database:
-
-User routes
-
-- GET `http://localhost:3001/api/users` &mdash; Get all Users
-- GET `http://localhost:3001/api/users/:userid` &mdash; Get a single category by id. (Replace :userid with the mongodb id of the user which you can get from the get all users route)
-- POST `http://localhost:3001/api/users` &mdash; Add a new user with the body syntax: <br>`{
-		"username": "New user",
-		"email": "newUser1@gmail.com"
-}`
-- PUT `http://localhost:3001/api/users/:userid` &mdash; Update an existing user following the syntax: <br>`{
-		"friends": "6469d0cbf3c322718072f09e"
-}`
-  In this example, we add the id of another user to the friends field of this user. It will then show up in get all users.
-- DELETE `http://localhost:3001/api/users/:userid` &mdash; Replace userid number of the user you want to delete.
-
-Thought routes
-
-- GET `http://localhost:3001/api/thoughts` &mdash; Get all thoughts
-- GET `http://localhost:3001/api/thoughts/:userid` &mdash; Get a single Thought by id. (Replace :userid with the number of the Thought)
-- POST `http://localhost:3001/api/thoughts` &mdash; Add a new thought with the body syntax: <br>`{
-	"thoughtText": "Newly created thought",
-	"username": "example name "
-}`
-- PUT `http://localhost:3001/api/thoughts/:userid` &mdash; Update an existing Thought. Replace userid with the id of the Thought and follow the syntax: <br>`{
-	"thoughtText": "An updated thought"
-}`
-- DELETE `http://localhost:3001/api/thoughts/:id` &mdash; Replace id number of the Thought you want to delete.
+In the `about me` tab you'll find a summary of who I am. In the `portfolio` tab, you'll see some projects I have worked on and the link on each project will take you to the url where the projet is located. The `contact` tab has a form which you can fill out with your information and leave a message so I can get in touch with you. Finally, you'll find my resume in the form of a pdf in the `resume` tab.
 
 ## MIT License
 
@@ -67,8 +40,6 @@ There are no guidelines for contributing at the moment but feel free to reach ou
 There are no tests for this project at the moment.
 
 ## Walkthrough video
-
-Click [here](https://drive.google.com/file/d/1_NL0zhlbtGdoSbwmSCsdVIBpIGDFJGeF/view) to see the video
 
 ## Questions
 
