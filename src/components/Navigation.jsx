@@ -13,8 +13,8 @@ export default function Navigation() {
 
   // TODO: Add a comment describing the functionality of this method
   const renderPage = () => {
-    if (currentPage === 'AboutMe') {
-      return <AboutMe />;
+    if (currentPage === 'Contact') {
+      return <Contact />;
     }
     if (currentPage === 'Portfolio') {
       return <Portfolio />;
@@ -22,7 +22,7 @@ export default function Navigation() {
     if (currentPage === 'Resume') {
       return <Resume />;
     }
-    return <Contact />;
+    return <AboutMe />;
   };
 
   const handlePageChange = (page) => setCurrentPage(page);

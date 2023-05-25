@@ -1,0 +1,11 @@
+.footer {
+  display: flex;
+  flex-direction: row;
+  height: 50px; /* Set the minimum height of the container to 100% of the viewport height */
+  width: auto;
+  justify-content: center; /* Push the footer to the bottom */
+  align-items: center; /* Center the content horizontally */
+  background-color: lightgray;
+  padding: 5px;
+  list-style: none;
+}
